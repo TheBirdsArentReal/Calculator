@@ -124,6 +124,9 @@ function changeCSSLight(cssFile, cssLinkIndex) {
     newlink.setAttribute("href", "calc-light.css");
 
     document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
+    
+    var element = document.getElementByTagName("body");
+    element.classList.remove("sky");
 }
 
 function changeCSSDark(cssFile, cssLinkIndex) {
@@ -136,5 +139,6 @@ function changeCSSDark(cssFile, cssLinkIndex) {
     newlink.setAttribute("href", "calc.css");
 
     document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
+
 }
 

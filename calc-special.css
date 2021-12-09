@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    height: 100vh;
+    background: #8c8c8c;
 }
 
 *, *::before, *::after {
@@ -15,6 +19,7 @@ html {
 .calculator {
   border: 1px solid grey;
   border-radius: 5px;
+  background: white; 
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,7 +30,7 @@ html {
 .calculator-screen {
   width: 100%;
   font-size: 5rem;
-  font-family: 'Jura';
+  font-family: 'Gwendolyn';
   font-weight: bold;
   height: 80px;
   border: solid, 0.5px, white;
@@ -42,8 +47,8 @@ button {
   background: #252525;
   border-radius: 3px;
   border: 1px solid #c4c4c4;
-  font-size: 2rem;
-  font-family: 'Jura';  
+  font-size: 2.2rem;
+  font-family: 'Gwendolyn';  
   color: #fff;
   background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
@@ -51,33 +56,33 @@ button {
 }
 
 button:hover {
-  background-color: #6fba82;
+  background-color: #ff6666;
   border: black;
 }
 
 .operator {
   color: #fff;
-  background: #f37055;
-  font-size: 2.5rem;
+  background: #008000;
+  font-size: 3.5rem;
 }
 
 .operator:hover {
-  background:#f79a88; 
+  background:rgba(128, 255, 128, 0.6); 
 }
 
 .all-clear {
-  background-color: #ef4e7b;
+  background-color: #990000;
   border-radius: 3px;
   border: 1px solid #c4c4c4;
   color: #fff;
 }
 
 .all-clear:hover {
-  background-color: #f17377;
+  background-color: #cc0000;
 }
 
 .equal-sign {
-  background-color: #1098ad;
+  background-color: #004d00;
   border-radius: 3px;
   border: 1px solid #c4c4c4;
   color: #fff;
@@ -86,7 +91,7 @@ button:hover {
 }
 
 .equal-sign:hover {
-  background-color: #9cdee8;
+  background-color: #008000;
 }
 
 .calculator-keys {
@@ -98,7 +103,7 @@ button:hover {
 
 .gradient-border {
   --borderWidth: 0.8em;
-  background: #1D1F20;
+  background: #001a00;
   position: relative;
   border-radius: var(--borderWidth);}
 
@@ -109,26 +114,26 @@ button:hover {
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background: linear-gradient(60deg, #408000, #339933, #99ff99, #ff6666,#cc0000,#b3003b);
   border-radius: calc(2 * var(--borderWidth));
   z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 5s ease alternate infinite;
   background-size: 300% 300%;}
 
 .gradient-border::after {
-      content: '';
+  content: '';
   position: absolute;
   top: calc(-3 * var(--borderWidth));
   left: calc(-3 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 6);
   width: calc(100% + var(--borderWidth) * 6);
-  filter: blur(calc(var(--borderWidth) / 0.0666));
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  filter: blur(calc(var(--borderWidth) / 0.0869));
+  background: linear-gradient(60deg, #408000, #339933, #99ff99, #ff6666,#cc0000,#b3003b);
   border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
+  z-index: -2;
+  animation: animatedgradient 5s ease alternate infinite;
   background-size: 300% 300%;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 
@@ -142,3 +147,15 @@ button:hover {
 	100% {
 		background-position: 0% 50%;
 	}}
+
+img {
+    margin-top: 0.5em;
+    margin-left: 3em;
+    background: #990033;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+img:hover {
+    opacity: 1;
+}

@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Taschenrechner, Baby!</title>
-    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="calc-special.css">
+    <script src="snow.js" defer></script>
     <script src="calc.js" defer></script>
+    
 </head>
-<body>
+<body class="sky">
      
-    <a href="#" onclick="changeCSSLight('calc.css', 0);">STYLE 1</a> 
-        <a href="#" onclick="changeCSSDark('calc-light.css', 0);">STYLE 2</a>
+    <div calss="styleButton1"><a href="#" onclick="changeCSSLight('calc.css', 0);"><img src="sun.png"></a></div> 
+    <div calss="styleButton2"><a href="#" onclick="changeCSSDark('calc-light.css', 0);"><img src="moon.png"></a></div>
     
     <div class="calculator">
         <div class="gradient-border">

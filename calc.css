@@ -142,3 +142,15 @@ button:hover {
 	100% {
 		background-position: 0% 50%;
 	}}
+
+
+img {
+    margin-top: 0.5em;
+    margin-left: 3em;
+    background: white;
+    border-radius: 10%;
+}
+
+canvas {
+    visibility: hidden;
+}
