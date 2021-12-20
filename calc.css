@@ -144,13 +144,71 @@ button:hover {
 	}}
 
 
-img {
+#light {
+    background: #ffffcc;
     margin-top: 0.5em;
     margin-left: 3em;
-    background: white;
     border-radius: 10%;
+    opacity: 0.5;
 }
+
+#light:hover {
+    opacity: 1;
+}
+
+#dark {
+    background: #666666;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#dark:hover {
+    opacity: 1;
+}
+
+#snow {
+    background: #990033;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#snow:hover {
+    opacity: 1;
+}
+
+#flower {
+    background: #009973;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#flower:hover {
+    opacity: 1;
+}
+
+#poke {
+    background: #ffcc00;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#poke:hover {
+    opacity: 1;
+}
+
 
 canvas {
     visibility: hidden;
+}
+
+.pika {
+    visibility: collapse;
 }

@@ -3,15 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>Taschenrechner, Baby!</title>
-    <link rel="stylesheet" href="calc-special.css">
+    <link rel="stylesheet" href="calc.css">
     <script src="snow.js" defer></script>
     <script src="calc.js" defer></script>
     
 </head>
-<body class="sky">
+<body class="sky" id="animation">
      
-    <div calss="styleButton1"><a href="#" onclick="changeCSSLight('calc.css', 0);"><img src="sun.png"></a></div> 
-    <div calss="styleButton2"><a href="#" onclick="changeCSSDark('calc-light.css', 0);"><img src="moon.png"></a></div>
+    <div calss="styleButton"><a href="#" onclick="changeCSSLight('calc-light.css', 0);"><img id="light" src="sun.png"></a></div> 
+    <div calss="styleButton"><a href="#" onclick="changeCSSDark('calc.css', 0);"><img id="dark" src="moon.png"></a></div>
+    <div calss="styleButton"><a href="#" onclick="changeCSSFestive('calc-special.css', 0);"><img id="snow" src="snow.png"></a></div>
+    <div calss="styleButton"><a href="#" onclick="changeCSSFloral('calc-flora.css', 0);"><img id="flower" src="flower.png"></a></div>
+    <div calss="styleButton"><a href="#" onclick="changeCSSPika('calc-pika.css', 0);"><img id="poke" src="poke.png"></a></div>
     
     <div class="calculator">
         <div class="gradient-border">
@@ -46,6 +49,43 @@
             </div>
         </div>
     </div>
+    
+    <section class="flower">
+        
+        <div class="big-petal big-petal1"></div>
+        <div class="big-petal big-petal2"></div>
+        <div class="big-petal big-petal3"></div>
+        <div class="big-petal big-petal4"></div>
+        <div class="small-petal small-petal1"></div>
+        <div class="small-petal small-petal2"></div>
+        <div class="small-petal small-petal3"></div>
+        <div class="small-petal small-petal4"></div>
+        <div class="small-petal small-petal5"></div>
+        <div class="small-petal small-petal6"></div>
+        <div class="small-petal small-petal7"></div>
+        <div class="small-petal small-petal8"></div>
+        
+    </section>
+    
+    <section class="pika">
+        <img id="pika" src="pikachu.png">
+        <div>
+            <button id="lightning" onclick="startAnimation(), shake()">
+                Donnerblitz <br>
+                <span>Elektro</span> 10/10
+            </button>
+        </div>
+        
+        <script>
+            function startAnimation() {
+                document.getElementById("animation").style.animation = "lightning 380ms ease";
+            }
+            function shake() {
+                document.getElementById("pika").style.animation = "shake 580ms";
+            }
+        </script>
+        
+    </section>
     
 </body>
 </html>

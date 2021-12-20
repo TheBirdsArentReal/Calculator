@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  font-weight: bold
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+    background: #ffefcc;
+}
+
+.calculator {
+  border: 3px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.calculator-screen {
+  width: 100%;
+  font-size: 5rem;
+  font-family: 'VT323';
+  font-weight: bold;
+  height: 80px;
+  border: solid, 3px, black;
+  border-radius: 5px;
+  background-color: #ffd480;
+  color: black;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+button {
+  height: 60px;
+  background: white;
+  border-radius: 3px;
+  border: 2px solid black;
+  font-size: 2.5rem;
+  font-family: 'VT323';  
+  color: black;
+  background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+  text-shadow: 0 1px rgba(255,255,255,.4);
+}
+
+button:hover {
+  background-color: #ffc266;
+  border:3px solid white;
+}
+
+.operator {
+  color: black;
+  background: #ff8000;
+  font-size: 2.5rem;
+  border: 2px solid black;
+}
+
+.operator:hover {
+  background:#cc6600; 
+  border:3px solid white;
+}
+
+.all-clear {
+  background-color: #e60000;
+  border-radius: 3px;
+  border: 2px solid black;
+  color: black;
+}
+
+.all-clear:hover {
+  background-color: #990000;
+  border:3px solid white;
+}
+
+.equal-sign {
+  background-color: black;
+  border-radius: 3px;
+  border: 2px solid black;
+  color: white;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+}
+
+.equal-sign:hover {
+  background-color: black;
+  border:3px solid white;
+  color: grey;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.gradient-border {
+  --borderWidth: 0.8em;
+  background: #ffcc00;
+  position: relative;
+  border-radius: var(--borderWidth);}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(69deg, #ff0000, #ffd633, #000000);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 5s linear alternate infinite;
+  background-size: 300% 300%;}
+
+.gradient-border::after {
+      content: '';
+  position: absolute;
+  top: calc(-3 * var(--borderWidth));
+  left: calc(-3 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 6);
+  width: calc(100% + var(--borderWidth) * 6);
+  filter: blur(calc(var(--borderWidth) / 0.3));
+  background: linear-gradient(69deg, #ff0000, #ffd633, #000000);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 5s linear alternate infinite;
+  background-size: 300% 300%;
+  opacity: 1;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}}
+
+@keyframes lightning {
+    0% {
+        background-color: white;
+        filter: blur(20%);
+        opacity: 0.4;
+    }
+    10% {
+        background-color: #66ffff;
+        filter: blur(50%);
+        opacity: 0.7;
+    }
+    20% {
+        background-color: white;
+        filter: blur(20%);
+        opacity: 0.3;
+    }    
+    30% {
+        background-color: #66ffcc;
+        filter: blur(40%);
+        opacity: 0.5;
+    }
+    40% {
+        background-color: white;
+        filter: blur(70%);
+        opacity: 0.9;
+    }    
+    50% {
+        background-color: #99ffeb;
+        filter: blur(10%);
+        opacity: 0.5;
+    }
+    60% {
+        background-color: white;
+        filter: blur(20%);
+        opacity: 0.2;
+    }
+    70% {
+        background-color: #1affff;
+        filter: blur(60%);
+        opacity: 0.4;
+    }
+    80% {
+        background-color: white;
+        filter: blur(20%);
+        opacity: 0.6;
+    }
+    90% {
+        background-color: #33ffd6;
+        filter: blur(40%);
+        opacity: 0.5;
+    }
+    100% {
+        background-color: white;
+        filter: blur(30%);
+        opacity: 0.3;
+    }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#pika {
+    margin-left: 10%;
+}
+
+#lightning {
+    width: 8em;
+    height: 3em;
+    text-align: center;
+    margin-left: 13em;
+    border: solid #ffdb4d 4px;
+    box-shadow: 5px #ffcc00;
+}
+
+span {
+    color: #ffcc00;
+    font-size: 0.7em;
+    background: #fff5cc;
+}
+
+#light {
+    background: #ffffcc;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#light:hover {
+    opacity: 1;
+}
+
+#dark {
+    background: #666666;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#dark:hover {
+    opacity: 1;
+}
+
+#snow {
+    background: #990033;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#snow:hover {
+    opacity: 1;
+}
+
+#flower {
+    background: #009973;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#flower:hover {
+    opacity: 1;
+}
+
+#poke {
+    background: #ffcc00;
+    margin-top: 0.5em;
+    margin-left: 3em;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+#poke:hover {
+    opacity: 1;
+}
+
+
+canvas {
+    visibility: hidden;
+}
